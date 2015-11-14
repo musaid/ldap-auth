@@ -1,5 +1,5 @@
 <?php
-use Ccovey\LdapAuth;
+use Musaid\LdapAuth;
 use adLDAP\adLDAP;
 use Illuminate\Auth;
 

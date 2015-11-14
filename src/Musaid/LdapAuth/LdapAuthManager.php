@@ -1,4 +1,4 @@
-<?php namespace Ccovey\LdapAuth;
+<?php namespace Musaid\LdapAuth;
 
 use Exception;
 use adLDAP\adLDAP;

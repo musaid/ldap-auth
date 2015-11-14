@@ -1,6 +1,6 @@
 <?php
 
-use Ccovey\LdapAuth;
+use Musaid\LdapAuth;
 
 use Mockery as m;
 
@@ -16,7 +16,7 @@ class LdapAuthUserProviderTest extends PHPUnit_Framework_TestCase
 			->zeroOrMoreTimes()
 			->andReturn(null);
 
-		$this->ident = 'ccovey';
+		$this->ident = 'musaid';
 
 		$this->ad->shouldReceive('user')->atLeast(1)
 			->andReturn($this->ad);
@@ -85,15 +85,15 @@ class LdapAuthUserProviderTest extends PHPUnit_Framework_TestCase
 
 		$this->assertContains('bar', $retrieved);
 
-		$this->assertContains('ccovey', $retrieved);
+		$this->assertContains('musaid', $retrieved);
 	}
 
 	public function testValidateCredentials()
 	{
-		$credentials = array('username' => 'ccovey', 'password' => 'password');
+		$credentials = array('username' => 'musaid', 'password' => 'password');
 		$this->ad->shouldReceive('authenticate')->once()->andReturn(true);
-		$user = new Ccovey\LdapAuth\LdapAuthUserProvider($this->ad,$this->config);
-		$model = m::mock('Ccovey\LdapAuth\LdapUser');
+		$user = new Musaid\LdapAuth\LdapAuthUserProvider($this->ad,$this->config);
+		$model = m::mock('Musaid\LdapAuth\LdapUser');
 		$validate = $user->validateCredentials($model, $credentials);
 
 		$this->assertTrue($validate);
@@ -101,7 +101,7 @@ class LdapAuthUserProviderTest extends PHPUnit_Framework_TestCase
 
 	protected function getProvider($conn, $model = null)
 	{
-		return $this->getMock('Ccovey\LdapAuth\LdapAuthUserProvider', 
+		return $this->getMock('Musaid\LdapAuth\LdapAuthUserProvider', 
 			array('createModel'), array($conn, $this->config, $model));
 	}
 
@@ -109,9 +109,9 @@ class LdapAuthUserProviderTest extends PHPUnit_Framework_TestCase
 	{
 		$info = new stdClass;
 
-		$info->samaccountname = 'ccovey';
+		$info->samaccountname = 'musaid';
 
-		$info->displayName = 'Cody Covey';
+		$info->displayName = 'Mohamed Musaid';
 
 		$info->distinguishedname = 'DC=LDAP,OU=AUTH,OU=FIRST GROUP';
 

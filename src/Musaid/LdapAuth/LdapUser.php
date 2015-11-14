@@ -1,4 +1,4 @@
-<?php namespace Ccovey\LdapAuth;
+<?php namespace Musaid\LdapAuth;
 
 use Config;
 use Illuminate\Auth;
@@ -6,7 +6,7 @@ use Illuminate\Auth;
 /**
  * Description of LdapUser
  *
- * @author ccovey
+ * @author musaid (original author - ccovey)
  */
 class LdapUser implements Auth\UserInterface
 {

@@ -1,11 +1,11 @@
 {
-    "name": "ccovey/ldap-auth",
+    "name": "musaid/ldap-auth",
     "description": "",
     "keywords": ["laravel", "L4", "LDAP", "Authentication", "Laravel 4"],
     "authors": [
         {
-            "name": "Cody Covey",
-            "email": "ccovey14@gmail.com"
+            "name": "musaid",
+            "email": "musaid@live.com"
         }
     ],
     "require": {
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Ccovey\\LdapAuth": "src/"
+            "Musaid\\LdapAuth": "src/"
         }
     },
     "minimum-stability": "dev"

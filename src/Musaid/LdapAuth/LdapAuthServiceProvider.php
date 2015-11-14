@@ -1,4 +1,4 @@
-<?php namespace Ccovey\LdapAuth;
+<?php namespace Musaid\LdapAuth;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,7 @@ class LdapAuthServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('ccovey/ldap-auth');
+		$this->package('musaid/ldap-auth');
 	}
 
 	/**

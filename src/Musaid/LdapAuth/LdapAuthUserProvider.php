@@ -1,4 +1,4 @@
-<?php namespace Ccovey\LdapAuth;
+<?php namespace Musaid\LdapAuth;
 
 use Illuminate\Config\Repository;
 use adLDAP;
